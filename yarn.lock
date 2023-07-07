@@ -324,6 +324,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/matter-js@npm:^0.18.5":
+  version: 0.18.5
+  resolution: "@types/matter-js@npm:0.18.5"
+  checksum: 0747b8b8b811a13946f5fbf07160fb4ab30e5964b6fb280fcfd478388a8c7ef112aaeb5190c3188ccc2e7d0084788ed9c8514f8ae8749add5a0563652861220a
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:20.4.0":
   version: 20.4.0
   resolution: "@types/node@npm:20.4.0"
@@ -3133,6 +3140,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "physical-sandbox@workspace:."
   dependencies:
+    "@types/matter-js": ^0.18.5
     "@types/node": 20.4.0
     "@types/react": 18.2.14
     "@types/react-dom": 18.2.6

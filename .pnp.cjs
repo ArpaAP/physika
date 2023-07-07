@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/matter-js", "npm:0.18.5"],\
             ["@types/node", "npm:20.4.0"],\
             ["@types/react", "npm:18.2.14"],\
             ["@types/react-dom", "npm:18.2.6"],\
@@ -441,6 +442,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip/node_modules/@types/json5/",\
           "packageDependencies": [\
             ["@types/json5", "npm:0.0.29"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/matter-js", [\
+        ["npm:0.18.5", {\
+          "packageLocation": "./.yarn/cache/@types-matter-js-npm-0.18.5-7cb5733a4f-0747b8b8b8.zip/node_modules/@types/matter-js/",\
+          "packageDependencies": [\
+            ["@types/matter-js", "npm:0.18.5"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3754,6 +3764,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["physical-sandbox", "workspace:."],\
+            ["@types/matter-js", "npm:0.18.5"],\
             ["@types/node", "npm:20.4.0"],\
             ["@types/react", "npm:18.2.14"],\
             ["@types/react-dom", "npm:18.2.6"],\
