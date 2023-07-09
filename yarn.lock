@@ -70,6 +70,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@headlessui/react@npm:^1.7.15":
+  version: 1.7.15
+  resolution: "@headlessui/react@npm:1.7.15"
+  dependencies:
+    client-only: ^0.0.1
+  peerDependencies:
+    react: ^16 || ^17 || ^18
+    react-dom: ^16 || ^17 || ^18
+  checksum: f2d11d58499ddf1362a40d84d92b7db932adaccc3596f44f1eead642258280f124497f2b329cee6e04801818bb2e66c42d752ee05f40f8b5239c2f692128e568
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
   resolution: "@humanwhocodes/config-array@npm:0.11.10"
@@ -291,6 +303,13 @@ __metadata:
     picocolors: ^1.0.0
     tslib: ^2.6.0
   checksum: 24e04c121269317d259614cd32beea3af38277151c4002df5883c4be920b8e3490bb897748e844f9d46bf68230f86dabd4e8f093773130e7e60529a769a132fc
+  languageName: node
+  linkType: hard
+
+"@popperjs/core@npm:^2.11.8":
+  version: 2.11.8
+  resolution: "@popperjs/core@npm:2.11.8"
+  checksum: e5c69fdebf52a4012f6a1f14817ca8e9599cb1be73dd1387e1785e2ed5e5f0862ff817f420a87c7fc532add1f88a12e25aeb010ffcbdc98eace3d55ce2139cf0
   languageName: node
   linkType: hard
 
@@ -880,6 +899,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"classnames@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: 2c62199789618d95545c872787137262e741f9db13328e216b093eea91c85ef2bfb152c1f9e63027204e2559a006a92eb74147d46c800a9f96297ae1d9f96f4e
+  languageName: node
+  linkType: hard
+
 "clean-stack@npm:^2.0.0":
   version: 2.2.0
   resolution: "clean-stack@npm:2.2.0"
@@ -887,7 +913,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"client-only@npm:0.0.1":
+"client-only@npm:0.0.1, client-only@npm:^0.0.1":
   version: 0.0.1
   resolution: "client-only@npm:0.0.1"
   checksum: 0c16bf660dadb90610553c1d8946a7fdfb81d624adea073b8440b7d795d5b5b08beb3c950c6a2cf16279365a3265158a236876d92bce16423c485c322d7dfaf8
@@ -2502,7 +2528,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
+"loose-envify@npm:^1.0.0, loose-envify@npm:^1.1.0, loose-envify@npm:^1.4.0":
   version: 1.4.0
   resolution: "loose-envify@npm:1.4.0"
   dependencies:
@@ -2559,10 +2585,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"matter-js@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "matter-js@npm:0.12.0"
+  checksum: 2742f29c74eb92f41e50c52bbba43609a946f2a3ea5577ceb2a1c4fca11c77091788663971eec435a0ef8af550c1d64aedc206349734b1bcadd2c5088cde5871
+  languageName: node
+  linkType: hard
+
 "matter-js@npm:^0.19.0":
   version: 0.19.0
   resolution: "matter-js@npm:0.19.0"
   checksum: 1f226a0826ad9700e7d171daeb17f6d18b7f4fcc94a6530b7dd190d2e3c7380b5b4d518a4d0272aaf6a674475b2ef777a44320ab639ce2e8974ebb02a58a50ca
+  languageName: node
+  linkType: hard
+
+"matter-lines@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "matter-lines@npm:0.1.0"
+  dependencies:
+    matter-js: ^0.12.0
+    poly-decomp: ^0.2.1
+  checksum: 86103c58dbe017bf30dfc291ad9c9b7c3d20c49d99cd989d784dc81658466a775b0d9e19426c0e18aceffba17c98c911334f5aaeefa8240d6d5625b332bae879
   languageName: node
   linkType: hard
 
@@ -3140,18 +3183,24 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "physical-sandbox@workspace:."
   dependencies:
+    "@headlessui/react": ^1.7.15
+    "@popperjs/core": ^2.11.8
     "@types/matter-js": ^0.18.5
     "@types/node": 20.4.0
     "@types/react": 18.2.14
     "@types/react-dom": 18.2.6
     autoprefixer: 10.4.14
+    classnames: ^2.3.2
     eslint: 8.44.0
     eslint-config-next: 13.4.9
     matter-js: ^0.19.0
+    matter-lines: ^0.1.0
     next: 13.4.9
     postcss: 8.4.25
     react: 18.2.0
     react-dom: 18.2.0
+    react-icons: ^4.10.1
+    react-popper: ^2.3.0
     tailwindcss: 3.3.2
     typescript: 5.1.6
   languageName: unknown
@@ -3182,6 +3231,13 @@ __metadata:
   version: 4.0.6
   resolution: "pirates@npm:4.0.6"
   checksum: 46a65fefaf19c6f57460388a5af9ab81e3d7fd0e7bc44ca59d753cb5c4d0df97c6c6e583674869762101836d68675f027d60f841c105d72734df9dfca97cbcc6
+  languageName: node
+  linkType: hard
+
+"poly-decomp@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "poly-decomp@npm:0.2.1"
+  checksum: 6e67ebc795447189dd7e64e45117bf7fafc7998ee9f16cae982ca425820772b43a4b2f571c4227b349dca0036ccff911cdd55238aa77cc0b4017b1c3cdceb6eb
   languageName: node
   linkType: hard
 
@@ -3331,10 +3387,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-fast-compare@npm:^3.0.1":
+  version: 3.2.2
+  resolution: "react-fast-compare@npm:3.2.2"
+  checksum: 2071415b4f76a3e6b55c84611c4d24dcb12ffc85811a2840b5a3f1ff2d1a99be1020d9437ee7c6e024c9f4cbb84ceb35e48cf84f28fcb00265ad2dfdd3947704
+  languageName: node
+  linkType: hard
+
+"react-icons@npm:^4.10.1":
+  version: 4.10.1
+  resolution: "react-icons@npm:4.10.1"
+  peerDependencies:
+    react: "*"
+  checksum: b6c8d4fe482b112e1041515d93ef7670a0af128855c926052a076b64d0b991cdd4391394b26467100f8da3859db1ebd8f9c6b7614fa5969fde83de45c71031a3
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"react-popper@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "react-popper@npm:2.3.0"
+  dependencies:
+    react-fast-compare: ^3.0.1
+    warning: ^4.0.2
+  peerDependencies:
+    "@popperjs/core": ^2.0.0
+    react: ^16.8.0 || ^17 || ^18
+    react-dom: ^16.8.0 || ^17 || ^18
+  checksum: 837111c98738011c69b3069a464ea5bdcbf487105b6148e8faf90cb7337e134edb1b98b8824322941c378756cca30a15c18c25f558e53b85ed5762fa0dc8e6b2
   languageName: node
   linkType: hard
 
@@ -4107,6 +4193,15 @@ __metadata:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
+  languageName: node
+  linkType: hard
+
+"warning@npm:^4.0.2":
+  version: 4.0.3
+  resolution: "warning@npm:4.0.3"
+  dependencies:
+    loose-envify: ^1.0.0
+  checksum: 4f2cb6a9575e4faf71ddad9ad1ae7a00d0a75d24521c193fa464f30e6b04027bd97aa5d9546b0e13d3a150ab402eda216d59c1d0f2d6ca60124d96cd40dfa35c
   languageName: node
   linkType: hard
 
