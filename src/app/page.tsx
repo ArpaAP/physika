@@ -198,6 +198,8 @@ export default function Home() {
   useEffect(() => {
     if (!mouseConstraint) return;
 
+    const currentEngine = engine.current;
+
     const handleMousedown = (event: IMouseEvent<MouseConstraint>) => {
       const { x, y } = event.source.mouse.position;
 
@@ -257,23 +259,61 @@ export default function Home() {
     };
 
     const handleStartDrag = (event: any) => {
-      console.log("startdrag", event);
+      // console.log("startdrag", event);
     };
 
     const handleEndDrag = (event: any) => {
-      console.log("enddrag", event);
+      // console.log("enddrag", event);
+    };
+
+    const handleCollisionStart = (event: any) => {
+      var pairs = event.pairs;
+
+      // change object colours to show those starting a collision
+      for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i];
+        console.log("start bodya", pair.bodyA.render.fillStyle, {
+          x: Math.round(pair.bodyA.velocity.x * 1000) / 1000,
+          y: Math.round(pair.bodyA.velocity.y * 1000) / 1000,
+        });
+        console.log("start bodyb", pair.bodyB.render.fillStyle, {
+          x: Math.round(pair.bodyB.velocity.x * 1000) / 1000,
+          y: Math.round(pair.bodyB.velocity.y * 1000) / 1000,
+        });
+      }
+    };
+
+    const handleCollisionEnd = (event: any) => {
+      var pairs = event.pairs;
+
+      // change object colours to show those in an active collision (e.g. resting contact)
+      for (var i = 0; i < pairs.length; i++) {
+        var pair = pairs[i];
+        console.log("end bodya", pair.bodyA.render.fillStyle, {
+          x: Math.round(pair.bodyA.velocity.x * 1000) / 1000,
+          y: Math.round(pair.bodyA.velocity.y * 1000) / 1000,
+        });
+        console.log("end bodyb", pair.bodyB.render.fillStyle, {
+          x: Math.round(pair.bodyB.velocity.x * 1000) / 1000,
+          y: Math.round(pair.bodyB.velocity.y * 1000) / 1000,
+        });
+      }
     };
 
     Events.on(mouseConstraint, "mousedown", handleMousedown);
     Events.on(mouseConstraint, "mouseup", handleMouseup);
     Events.on(mouseConstraint, "startdrag", handleStartDrag);
     Events.on(mouseConstraint, "enddrag", handleEndDrag);
+    Events.on(currentEngine, "collisionStart", handleCollisionStart);
+    Events.on(currentEngine, "collisionEnd", handleCollisionEnd);
 
     return () => {
       Events.off(mouseConstraint, "mousedown", handleMousedown);
       Events.off(mouseConstraint, "mouseup", handleMouseup);
       Events.off(mouseConstraint, "startdrag", handleStartDrag);
       Events.off(mouseConstraint, "enddrag", handleEndDrag);
+      Events.off(currentEngine, "collisionStart", handleCollisionStart);
+      Events.off(currentEngine, "collisionEnd", handleCollisionEnd);
     };
   }, [
     currentPointer,
@@ -697,7 +737,7 @@ export default function Home() {
               <div className="text-xl font-semibold">시뮬레이션 설정</div>
               <hr className="my-3 border-neutral-300" />
               <div className="grid grid-cols-2 items-center">
-                <div className="col-span-1">중력:</div>
+                <div className="col-span-1">중력 가속도:</div>
                 <div className="col-span-1">
                   <input
                     type="number"
